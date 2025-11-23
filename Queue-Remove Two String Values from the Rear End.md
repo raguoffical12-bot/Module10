@@ -1,28 +1,40 @@
-# Queue-Remove Two String Values from the Rear End in Python 🧵
+### EX: 10.4  check whether the stack is full and then display the stack values in reverse order
+### Aim: Write a Python program to create a stack of maximum size 5 using LifoQueue, accept elements from the user, check whether the stack is full, and then display the elements in reverse order (from top to bottom).
 
-This Python program demonstrates how to manage a list of strings and remove the last two elements (i.e., from the rear of the list).
+### Algorithm:
+Start
+Import LifoQueue from the queue module.
+Create a stack with a maximum size of 5.
+Read the number of elements 𝑛
+n to be inserted (up to 5).
+For each element (up to 𝑛n):
+Read the input number.
+Push (put) the element onto the stack.
+Check if the stack is full using stack.full().
+Print True if full, else False.
+Create an empty list to store popped elements.
+While the stack is not empty:
+Pop (get) an element from the stack and append it to the list.
+Print the elements of the list (which represent the stack in reverse order).
+End
+### Program:
+```
+reg no:212223070021
+name:Ragunandhan S
+from queue import LifoQueue
+stack = LifoQueue(maxsize=5)
+n= int(input())
+for i in range(n):
+    stack.put(input())
+print(stack.full())
+for i in range(n):
+    print(stack.get())
 
-## 🎯 Aim
-
-To write a Python program to:
-- Accept `n` string values from the user
-- Remove the last two values (rear end of the list)
-- Display the updated list
-
-## 🧠 Algorithm
-
-1. Create an empty list `q`.
-2. Read an integer `n` from the user (number of strings).
-3. Loop `n` times:
-   - Read a string input.
-   - Append it to the list `q`.
-4. Remove the last element using `pop()`.
-5. Remove the next last element using `pop()` again.
-6. Display the updated list.
-
-##  Program:
-Add Code Here
-
+```
 ### Output:
+![image](https://github.com/user-attachments/assets/51f4d171-f949-4d94-8945-f2f7dd08b203)
 
-## Result:
+### Result: Thus, the given program is implemented and executed successfully .
+ 
+
+
