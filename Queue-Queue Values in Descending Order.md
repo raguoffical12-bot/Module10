@@ -1,28 +1,47 @@
-# Queue-Queue Values in Descending Order Using Python 🧮
+### EX: 10.2 IMPLEMENTATION OF STACK
+### Aim: To Write a python program to implement the stack using deque method for rotating the stack.
+### Algorithm:
 
-This Python program simulates a queue using a list, removes the first two elements (FIFO order), and displays the remaining values in descending order.
+STEP 1: Start.
 
-## 🎯 Aim
+STEP 2: Import collections and import deque.
 
-To write a Python program to:
-- Accept user inputs into a list (queue)
-- Remove the first two elements (simulating dequeue)
-- Display the remaining values in **descending order**
+STEP 3: Create a list and get the input from user.
 
-## 🧠 Algorithm
+STEP 4: Create a variable n and get number of inputs from user.
 
-1. Create an empty list `q`.
-2. Read an integer `n` to determine how many elements will be added.
-3. Loop `n` times:
-   - Read an input value.
-   - Append it to the list `q`.
-4. Remove the first element using `pop(0)`.
-5. Remove the second element using `pop(0)` again.
-6. Sort the list in descending order.
-7. Print the updated list.
+STEP 5 : Using a loop get the inputs from user and append in deque.
 
-## 🧪 Program: 
+STEP 6: Using rotate function rotate the stack.
 
+STEP 7 : Print the result. 
+
+STEP 8 : Stop.
+### Program: 
+
+```
+reg no:212223070021
+name:Ragunandhan S
+from collections import deque
+
+stack = deque()
+
+n = int(input("Enter number of elements to push into the stack: "))
+for _ in range(n):
+    val = input("Enter value: ")
+    stack.append(val)
+
+print("Original Stack:", list(stack))
+
+k = int(input("Enter rotation value (positive = right, negative = left): "))
+stack.rotate(k)
+
+print("Stack after rotation:", list(stack))
+
+```
 ### Output:
 
-## Result:
+![image](https://github.com/user-attachments/assets/e6fcaef4-4b5c-45b5-a015-b6bcdb9aeb99)
+
+### Result: Thus, the given program is implemented and executed successfully .
+ 
