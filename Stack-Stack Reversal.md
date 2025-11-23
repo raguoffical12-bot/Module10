@@ -1,29 +1,45 @@
-# # Stack-Stack Reversal Program 🔁
+# 19CS301-Module10
+###EX: 10.a  STACK
+### Aim: To Write a python program to get the integer values from the user and push only the odd number into the stack and later pop the last 2 elements
+### Algorithm:
+STEP 1: Start.
 
-This Python program demonstrates how to reverse the values in a stack using basic stack operations like push and pop.
+STEP 2: Create a list and a variable n.
 
-## 🎯 Aim
+STEP 3: Get the value of n from user.
 
-To write a Python program that reverses the values in a stack using standard stack operations.
+STEP 4: Using loop append only odd elements in the stack.
 
-## 📋 Algorithm
+STEP 5 : Using another loop using built-in pop operation pop the last two elements.
 
-1. Create an empty stack.
-2. Read an integer `n` from the user (number of elements to push).
-3. Loop `n` times:
-   - Read an integer from the user.
-   - Push it onto the stack.
-4. Create an empty list called `reverse`.
-5. While the stack is not empty:
-   - Pop the top element.
-   - Append it to `reverse`.
-6. Print the reversed list.
+STEP 6: Print the result.
 
-
+STEP 7 : Stop.
 ### Program:
-Add Code Here
+```
+reg no:212223070021
+name:Ragunandhan S
+stack = []
+n = int(input("Enter the number of elements: "))
 
-## 🧪 Sample Input and Output
+for _ in range(n):
+    val = int(input())
+    if val % 2 != 0:
+        stack.append(val)
 
-## Result
+print("Stack after pushing odd numbers:", stack)
 
+if len(stack) >= 2:
+    stack.pop()
+    stack.pop()
+elif len(stack) == 1:
+    stack.pop()
+
+print("Stack after popping last 2 elements:", stack)
+
+```
+### Output:
+![image](https://github.com/user-attachments/assets/dd8866bf-2d68-4da9-b7b6-c4d2f1b0730c)
+
+
+### Result: Thus, the given program is implemented and executed successfully .
