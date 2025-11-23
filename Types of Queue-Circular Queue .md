@@ -1,34 +1,49 @@
-# 🔄 Types of Queue-Circular Queue in Python
+### EX: 10.4 IMPLEMENTATION OF QUEUE
+### Aim: To Develop a python program to get the 4 integer values from user and display the values using multiprocessing library
+### Algorithm:
 
-This project demonstrates the implementation of a **Circular Queue** in Python. The queue accepts 3 user values, performs enqueue and dequeue operations, and displays the removed values.
+STEP 1: Start.
 
----
+STEP 2: From Multiprocessing Import Queue.
 
-## 🎯 Aim
+STEP 3: Create a list and get the input from user.
 
-To develop a Python program that implements a Circular Queue:
-- Accepts 3 values from the user
-- Removes the 3 values from the queue
-- Displays the removed values
+STEP 4 : Append the elements in the list.
 
----
+STEP 5: Using 'get' built-in function print the list.
 
-## 🧠 Algorithm
+STEP 6 : Print the result.
 
-1. **Initialize** a circular queue of fixed size (e.g., 5).
-2. **Define the following functions**:
-   - `enqueue()`: Inserts an element into the queue.
-   - `dequeue()`: Removes an element from the queue.
-   - `display()`: Shows the queue contents.
-3. Accept 3 values from the user using the `enqueue()` method.
-4. Remove 3 values using the `dequeue()` method.
-5. Print the removed values.
+STEP 7 : Stop.
+### Program:
+```
+reg no:212223070021
+name:Ragunandhan S
+from multiprocessing import Process
 
----
+def display_value(val):
+    print(f"Value: {val}")
 
-## 💻 Program:
-Add Code Here
+if __name__ == "__main__":
+    values = []
+    print("Enter 4 integer values:")
+    for i in range(4):
+        num = int(input(f"Value {i+1}: "))
+        values.append(num)
 
+    processes = []
+    for val in values:
+        p = Process(target=display_value, args=(val,))
+        processes.append(p)
+        p.start()
+
+    for p in processes:
+        p.join()
+
+```
 ### Output:
+ ![image](https://github.com/user-attachments/assets/f698ccce-41a4-4d3b-bb21-59ac020aae89)
 
-## Result:
+
+### Result: Thus, the given program is implemented and executed successfully .
+ 
